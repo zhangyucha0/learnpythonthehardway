@@ -1,0 +1,10 @@
+animals = ['bear', 'python', 'peacock', 'kangaroo', 'whale', 'platypus']
+
+print '1. The 1st animals is at 0 and is a bear. Verify: %r' % animals[0]
+print '2. The 3rd animals is at 2 and is a peacock. Verify: %r' % animals[2]
+print '3. The 1st animals is at 0 and is a bear. Verify: %r' % animals[0]
+print '4. The 4th animals is at 3 and is a kangaroo. Verify: %r' % animals[3]
+print '5. The 5th animals is at 4 and is a whale. Verify: %r' % animals[4]
+print '6. The 3rd animals is at 2 and is a peacock. Verify: %r' % animals[2]
+print '7. The 6th animals is at 5 and is a platypus. Verify: %r' % animals[5]
+print '8. The 5th animals is at 4 and is a whale. Verify: %r' % animals[4]
