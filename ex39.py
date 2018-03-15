@@ -2,13 +2,13 @@
 
 """
 class Thing(object):
-    # 实际传入两个参数，第一个参数为默认参数self
+    # 类中的方法(函数)，第一个参数必须为self
     def test(self, hi):
         print self
         print "hi"
 
 a = Thing()
-a.test("Hello")
+a.test("Hello")  # 实际传入两个参数，第一个参数为默认参数self
 """
 
 ten_things = "Apples Oranges Crows Telephone Light Sugar"
