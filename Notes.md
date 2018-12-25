@@ -1,9 +1,21 @@
-# Learnpythonthehardway
+# 《Learn Python The Hard Way》练习&笔记
+
+![platform](https://img.shields.io/badge/platform-Windows-blue.svg)
+![python](https://img.shields.io/badge/Python-%202.x-green.svg)
+
+## 介绍
+> 原书地址[《learnpythonthehardway》](https://learnpythonthehardway.org/)
+
+本仓库包括：
+- 中文版书籍
+- 全部章节练习的完整代码（Windows环境下全部运行通过）
+- 重点内容笔记
+
+---
 
 ## ex3
 `print "What is 3 + 2?", 3 + 2`
 `print "Is it less or equal?", 5 <= -2`
-
 
 ## ex4
 `print "There are", cars, "cars available."`
@@ -108,7 +120,7 @@ raw_input()
 读取每行内容
 ```python
 f = open('test.txt','rU')
-try: 
+try:
     for line in f:
         print line  # line带"\n"
 finally:
@@ -200,7 +212,7 @@ def sort_words(words):
 [0, 5, 10, 15, 20, 25]
 ```
 
-```python# 
+```python#
 # we can also build lists, first start with an empty one
 elements = []
 
@@ -225,14 +237,14 @@ for i in range(0,6):
 ## ex35
 `str.isdigit()` 判断字符串是否只由数字组成（不存在小数的情况）
 `int(str)` 将字符串类型的数字转化为整数类型
-`exit(0)` 无错误退出 
+`exit(0)` 无错误退出
 `exit(1)` 有错误退出
 
 ## ex36
-1. 每一个“if 语句”必须包含一个 else. 
-2. 如果这个 else 永远都不应该被执行到，因为它本身没有任何意义，那你必须在 else 语句后面使用一个叫做 die 的函数，让它打印出错误信息并且死给你看，这和上一节的习题类似，这样你可以找到很多的错误。 
-3. “if 语句”的嵌套不要超过 2 层，最好尽量保持只有 1 层。 这意味着如果你在 if 里边又有了一个 if，那你就需要把第二个 if 移到另一个函数里面。 
-4. 将“if 语句”当做段落来对待，其中的每一个 if, elif, else 组合就跟一个段落的句子组合一样。在这种组合的最前面和最后面留一个空行以作区分。 
+1. 每一个“if 语句”必须包含一个 else.
+2. 如果这个 else 永远都不应该被执行到，因为它本身没有任何意义，那你必须在 else 语句后面使用一个叫做 die 的函数，让它打印出错误信息并且死给你看，这和上一节的习题类似，这样你可以找到很多的错误。
+3. “if 语句”的嵌套不要超过 2 层，最好尽量保持只有 1 层。 这意味着如果你在 if 里边又有了一个 if，那你就需要把第二个 if 移到另一个函数里面。
+4. 将“if 语句”当做段落来对待，其中的每一个 if, elif, else 组合就跟一个段落的句子组合一样。在这种组合的最前面和最后面留一个空行以作区分。
 5. 你的布尔测试应该很简单，如果它们很复杂的话，你需要将它们的运算事先放到一个 变量里，并且为变量取一个好名字。
 
 ## ex37
@@ -255,10 +267,10 @@ def yield_test(n):
     #做一些其它的事情      
     print("do something.")      
     print("end.")  
-  
+
 def call(i):  
     return i*2  
-  
+
 #使用for循环  
 for i in yield_test(5):  
     print(i,",")
@@ -278,7 +290,7 @@ i= 3
 i= 4  
 do something.  
 end.  
->>> 
+>>>
 ```
 
 `exec` 执行储存在字符串或文件中的Python语句，相比于 eval，exec可以执行更复杂的 Python 代码。
@@ -305,7 +317,7 @@ map(sq, [y for y in range(10)])
 
 ```python
 # -*- coding: UTF-8 -*-
- 
+
 # 首先获得Iterator对象:
 it = iter([1, 2, 3, 4, 5])
 # 循环:
@@ -373,7 +385,7 @@ print a.test("Hello")  # 实际传入两个参数，第一个参数为默认参�
 ```python
 def student(name, age):
     return name, age
-    
+
 x = {}
 x['_student'] = student
 print x['_student']('Ken', 12)
@@ -386,7 +398,7 @@ print x['_student']('Ken', 12)
 ## ex42
 将列表内的**字符串**（列表有且仅有字符串的情况下）以`-`作为连接符连接成一个字符串并输出
 ```python
-stuff = ['Test', 'This', 'Out'] 
+stuff = ['Test', 'This', 'Out']
 print '-'.join(stuff)
 >>> Test-This-Out
 ```
@@ -459,22 +471,20 @@ No template named index`
 sessions文件解码
 
 ```powershell
->>> import pickle 
->>>> import base64 
+>>> import pickle
+>>>> import base64
 >>>> base64.b64decode(open("sessions/XXXXX").read()) "(dp1\nS'count'\np2\nI1\nsS'ip'\np3\nV127.0.0.1\np4\nsS'session_id'\np5\nS'XXXX'\np6\ns."
->>>> 
->>>> x = base64.b64decode(open("sessions/XXXXX").read()) 
->>>> 
+>>>>
+>>>> x = base64.b64decode(open("sessions/XXXXX").read())
+>>>>
 >>>> pickle.loads(x) {'count': 1, 'ip': u'127.0.0.1', 'session_id': 'XXXXX'}
 ```
 
 
 ## 总结
-本仓库中的全部脚本皆为Windows平台下编写，并且全部运行成功。
+本书中文版的最新版本也是有一定年头了，而且中文版毕竟是别人翻译过来的，所以不要过于被书中的语句、案例所约束，要懂得变通。
 
 编程中遇到的大部分错误基本都是由于操作系统不同引起的文件路径格式差异问题，小部分是版本或环境差异引起的问题。
-
-本书中文版的最新版本也是有一定年头了，而且中文版毕竟是别人翻译过来的，所以不要过于被书中的语句、案例所约束，要懂得变通。
 
 读书过程中一定要善用搜索引擎，学会自己学习，拓展深度。
 
